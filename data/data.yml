@@ -1,0 +1,348 @@
+#-----请勿修改------config-info#----------start-----------------------------------------
+x-gaia-api-key: &x-gaia-api-key d6b00510-4549-4a05-bf37-fe7e7da9a1a3
+
+#-----请勿修改------config-info#----------ending----------------------------------------
+
+
+
+
+
+#--------------------这是一个登录案例--------------------------------------------
+test_user_login:
+      data:
+           -
+              method: 'post'
+              url: 'http://c2-uat-sso.longfor.com/doLogin'
+              
+              headers:
+                   -
+                      Content-Type: 'application/x-www-form-urlencoded'
+#--------------------变量区域，勿动--------------------------------------------                      
+                      x-gaia-api-key: *x-gaia-api-key
+                      c2-sso-sessionid: sessionid   
+#--------------------变量区域，勿动--------------------------------------------        
+              body:
+                   -
+                      username: 'lizhen16'
+                      password: '12' 
+              status_code: 200
+              message: '成功'
+           -
+              method: 'post'
+              url: 'http://c2-uat-sso.longfor.com/doLogin'
+              headers:
+                   -
+                      Content-Type: 'application/x-www-form-urlencoded' 
+#--------------------变量区域，勿动--------------------------------------------                      
+                      x-gaia-api-key: *x-gaia-api-key
+                      c2-sso-sessionid: sessionid   
+#--------------------变量区域，勿动--------------------------------------------        
+             
+              body:
+                   -
+                      username: 'lizhen16'
+                      password: '' 
+              status_code: 400
+              message: 'Please input username/password.'
+
+manage_list:
+      data:
+           -
+              method: 'post'
+              url: 'https://testapi.longhu.net/cm-alm-manage-admin-uat/alm/service/manage/list'
+              headers:
+                   -
+                      Content-Type: 'application/x-www-form-urlencoded'
+#--------------------变量区域，勿动--------------------------------------------                      
+                      x-gaia-api-key: *x-gaia-api-key
+                      c2-sso-sessionid: sessionid   
+#--------------------变量区域，勿动--------------------------------------------        
+      
+              body:
+                   -
+                      data:
+                              serviceId: ''
+                      pageInfo:
+                                  pageNum: '1'
+                                  pageSize: '100'                                                   
+              status_code: 200
+              message: '成功'
+              
+              
+
+lili11:
+      data:
+      
+#************************这是新的一条用例start***************************************  
+           -
+#------------------------method区域，start----------------------------------------- 
+              method: 'post'                         
+#------------------------method区域，end-------------------------------------------
+
+#------------------------url区域，start--------------------------------------------              
+              url: '${url}/alm/service/manage/save'  #${url}不可修改，只可修改后半部分
+#------------------------url区域，end---------------------------------------------- 
+              
+#--------------------headers区域，start--------------------------------------------                    
+              headers:
+                   -
+                      Content-Type: 'application/json'                     
+                      x-gaia-api-key: "${apiKey}"          #不可修改
+                      c2-sso-sessionid: "${sessionid}"     #不可修改
+#--------------------headers区域，end----------------------------------------------       
+#--------------------body区域，start-----------------------------------------------       
+         
+              body: {"data":{"serviceName":"${name10}","serviceProvideDepartObj":{"name":"运营部","id":"1000000006","parentId":"1000000004",
+              "subList":[{"name":"客户关系中心","id":"1000000007","parentId":"1000000006","subList":[]},
+              {"name":"运营中心","id":"1000000010","parentId":"1000000006","subList":[]},
+              {"name":"商业开发中心","id":"1000003534","parentId":"1000000006","subList":[]},
+              {"name":"数字运营及主数据中心","id":"1000005777","parentId":"1000000006","subList":[]}]},"serviceObj":["1"],"serviceTypeObj":{"id":"60b760aee164026fd20a0c1c","name":"散包管理类"},
+              "touchAccess":false,"serviceSchema":" ces","serviceRequestAddress":"","serviceFormType":"1","serviceProviderObj":{},
+              "serviceOnlineTime":"2021-07-23","serviceGuideAddress":"","serviceOwnerName":"吴**","serviceOwner":"wuyfeng","processGroupListName":"吴**",
+              "processGroupList":["wuyj"],"labelName":["ss"],"formType2Val":"","labelList":[{"name":"ss"}],"serviceProvideDepartId":"1000000006",
+              "serviceType":"60b760aee164026fd20a0c1c"}}
+#--------------------body区域，end------------------------------------------------- 
+#--------------------预期结果区域，start--------------------------------------------
+                
+              status_code: 10000
+              message: '成功'
+#--------------------预期结果区域，end-----------------------------------------------              
+#*****************************用例设计完成，end************************************ 
+
+
+
+#************************这是新的一条用例start***************************************  
+           -
+#------------------------method区域，start----------------------------------------- 
+              method: 'post'                         
+#------------------------method区域，end-------------------------------------------
+
+#------------------------url区域，start--------------------------------------------              
+              url: '${url}/alm/service/manage/save'  #${url}不可修改，只可修改后半部分
+#------------------------url区域，end---------------------------------------------- 
+              
+#--------------------headers区域，start--------------------------------------------                    
+              headers:
+                   -
+                      Content-Type: 'application/json'                     
+                      x-gaia-api-key: "${apiKey}"          #不可修改
+                      c2-sso-sessionid: "${sessionid}"     #不可修改
+#--------------------headers区域，end----------------------------------------------       
+#--------------------body区域，start-----------------------------------------------       
+         
+              body: {"data":{"serviceName":"sss12","serviceProvideDepartObj":{"name":"运营部","id":"1000000006","parentId":"1000000004",
+              "subList":[{"name":"客户关系中心","id":"1000000007","parentId":"1000000006","subList":[]},
+              {"name":"运营中心","id":"1000000010","parentId":"1000000006","subList":[]},
+              {"name":"商业开发中心","id":"1000003534","parentId":"1000000006","subList":[]},
+              {"name":"数字运营及主数据中心","id":"1000005777","parentId":"1000000006","subList":[]}]},"serviceObj":["1"],"serviceTypeObj":{"id":"60b760aee164026fd20a0c1c","name":"散包管理类"},
+              "touchAccess":false,"serviceSchema":" ces","serviceRequestAddress":"","serviceFormType":"1","serviceProviderObj":{},
+              "serviceOnlineTime":"2021-07-23","serviceGuideAddress":"","serviceOwnerName":"吴**","serviceOwner":"wuyfeng","processGroupListName":"吴**",
+              "processGroupList":["wuyj"],"labelName":["ss"],"formType2Val":"","labelList":[{"name":"ss"}],"serviceProvideDepartId":"1000000006",
+              "serviceType":"60b760aee164026fd20a0c1c"}}
+#--------------------body区域，end------------------------------------------------- 
+#--------------------预期结果区域，start--------------------------------------------
+                
+              status_code: 10004
+              message: '【sss12】服务名称重复'
+#--------------------预期结果区域，end-------------------------------------------------               
+#*****************************用例设计完成，end***************************************** 
+
+
+#************************这是新的一条用例start***************************************  
+           -
+#------------------------method区域，start----------------------------------------- 
+              method: 'post'                         
+#------------------------method区域，end-------------------------------------------
+
+#------------------------url区域，start--------------------------------------------              
+              url: '${url}/alm/outsourcingEmployeeDemand/add'  #${url}不可修改，只可修改后半部分
+#------------------------url区域，end---------------------------------------------- 
+              
+#--------------------headers区域，start--------------------------------------------                    
+              headers:
+                   -
+                      Content-Type: 'application/json'                     
+                      x-gaia-api-key: "${apiKey}"          #不可修改
+                      c2-sso-sessionid: "${sessionid}"     #不可修改
+#--------------------headers区域，end----------------------------------------------       
+#--------------------body区域，start-----------------------------------------------       
+         
+              body: {"data":{"needsList":[{"remark":"18600430789","postId":"107","levelId":"V1","levelAndMechanism":"V1-5fe37a1fe39649f49ecc3342e582db01","days":"99","entryTime":"2021-08-09","superiorName":"张**","superiorId":"600004049","firstInterviewerId":"600004049","secondInterviewerId":"600004049","firstIntervieweName":"张**","firstInterviewerPhone":"18600430789","secondInterviewerName":"张**","secondInterviewerPhone":"18600430789","leaderList":[{"id":null,"name":"张**","account":"zhangxinghua","employeeId":"600004049","department":"集团总部/数字科技部/项目管理中心/DT管理平台组","departmentShortName":"集团总部-数字科技部-项目管理中心-DT管理平台组","personType":1,"quit":false,"roleId":null,"roleName":null,"centerInfoList":null,"superiorName":null,"superior":null,"payRdCenter":null,"payRdCenterName":null,"assignRate":null,"rdCenter":"1000006076","centerName":"项目管理中心"}],"firstList":[{"id":null,"name":"张**","account":"zhangxinghua","employeeId":"600004049","department":"集团总部/数字科技部/项目管理中心/DT管理平台组","departmentShortName":"集团总部-数字科技部-项目管理中心-DT管理平台组","personType":1,"quit":false,"roleId":null,"roleName":null,"centerInfoList":null,"superiorName":null,"superior":null,"payRdCenter":null,"payRdCenterName":null,"assignRate":null,"rdCenter":"1000006076","centerName":"项目管理中心"}],"secondList":[{"id":null,"name":"张**","account":"zhangxinghua","employeeId":"600004049","department":"集团总部/数字科技部/项目管理中心/DT管理平台组","departmentShortName":"集团总部-数字科技部-项目管理中心-DT管理平台组","personType":1,"quit":false,"roleId":null,"roleName":null,"centerInfoList":null,"superiorName":null,"superior":null,"payRdCenter":null,"payRdCenterName":null,"assignRate":null,"rdCenter":"1000006076","centerName":"项目管理中心"}],"levelStatus":[{"gradeId":"V1","gradeName":"V1","mechanismId":"5fe37a1fe39649f49ecc3342e582db01","mechanismName":"【体系(Lily体系3)】"},{"gradeId":"V2","gradeName":"V2","mechanismId":"5fe37a1fe39649f49ecc3342e582db01","mechanismName":"【体系(Lily体系3)】"},{"gradeId":"V3","gradeName":"V3","mechanismId":"5fe37a1fe39649f49ecc3342e582db01","mechanismName":"【体系(Lily体系3)】"},{"gradeId":"V4","gradeName":"V4","mechanismId":"5fe37a1fe39649f49ecc3342e582db01","mechanismName":"【体系(Lily体系3)】"}],"workCity":"1","mechanismId":"5fe37a1fe39649f49ecc3342e582db01"}],"subProjectId":"251403","projectId":"251402"}}
+              
+#--------------------body区域，end------------------------------------------------- 
+#--------------------预期结果区域，start--------------------------------------------
+                
+              status_code: 10000
+              message: '成功'
+#--------------------预期结果区域，end-------------------------------------------------               
+#*****************************用例设计完成，end***************************************** 
+    
+    
+#************************这是新的一条用例start***************************************  
+           -
+#------------------------method区域，start----------------------------------------- 
+              method: 'post'                         
+#------------------------method区域，end-------------------------------------------
+
+#------------------------url区域，start--------------------------------------------              
+              url: '${url}/alm/outsourcingEmployeeDemand/add'  #${url}不可修改，只可修改后半部分
+#------------------------url区域，end---------------------------------------------- 
+              
+#--------------------headers区域，start--------------------------------------------                    
+              headers:
+                   -
+                      Content-Type: 'application/json'                     
+                      x-gaia-api-key: "${apiKey}"          #不可修改
+                      c2-sso-sessionid: "${sessionid}"     #不可修改
+#--------------------headers区域，end----------------------------------------------       
+#--------------------body区域，start-----------------------------------------------       
+         
+              body: {"data":{"needsList":[{"remark":"186004301111","postId":"107","levelId":"V1","levelAndMechanism":"V1-5fe37a1fe39649f49ecc3342e582db01","days":"99","entryTime":"2021-08-09","superiorName":"张**","superiorId":"600004049","firstInterviewerId":"600004049","secondInterviewerId":"600004049","firstIntervieweName":"张**","firstInterviewerPhone":"18600430789","secondInterviewerName":"张**","secondInterviewerPhone":"18600430789","leaderList":[{"id":null,"name":"张**","account":"zhangxinghua","employeeId":"600004049","department":"集团总部/数字科技部/项目管理中心/DT管理平台组","departmentShortName":"集团总部-数字科技部-项目管理中心-DT管理平台组","personType":1,"quit":false,"roleId":null,"roleName":null,"centerInfoList":null,"superiorName":null,"superior":null,"payRdCenter":null,"payRdCenterName":null,"assignRate":null,"rdCenter":"1000006076","centerName":"项目管理中心"}],"firstList":[{"id":null,"name":"张**","account":"zhangxinghua","employeeId":"600004049","department":"集团总部/数字科技部/项目管理中心/DT管理平台组","departmentShortName":"集团总部-数字科技部-项目管理中心-DT管理平台组","personType":1,"quit":false,"roleId":null,"roleName":null,"centerInfoList":null,"superiorName":null,"superior":null,"payRdCenter":null,"payRdCenterName":null,"assignRate":null,"rdCenter":"1000006076","centerName":"项目管理中心"}],"secondList":[{"id":null,"name":"张**","account":"zhangxinghua","employeeId":"600004049","department":"集团总部/数字科技部/项目管理中心/DT管理平台组","departmentShortName":"集团总部-数字科技部-项目管理中心-DT管理平台组","personType":1,"quit":false,"roleId":null,"roleName":null,"centerInfoList":null,"superiorName":null,"superior":null,"payRdCenter":null,"payRdCenterName":null,"assignRate":null,"rdCenter":"1000006076","centerName":"项目管理中心"}],"levelStatus":[{"gradeId":"V1","gradeName":"V1","mechanismId":"5fe37a1fe39649f49ecc3342e582db01","mechanismName":"【体系(Lily体系3)】"},{"gradeId":"V2","gradeName":"V2","mechanismId":"5fe37a1fe39649f49ecc3342e582db01","mechanismName":"【体系(Lily体系3)】"},{"gradeId":"V3","gradeName":"V3","mechanismId":"5fe37a1fe39649f49ecc3342e582db01","mechanismName":"【体系(Lily体系3)】"},{"gradeId":"V4","gradeName":"V4","mechanismId":"5fe37a1fe39649f49ecc3342e582db01","mechanismName":"【体系(Lily体系3)】"}],"workCity":"1","mechanismId":"5fe37a1fe39649f49ecc3342e582db01"}],"subProjectId":"251403","projectId":"251402"}}
+              
+#--------------------body区域，end------------------------------------------------- 
+#--------------------预期结果区域，start--------------------------------------------
+                
+              status_code: 10004
+              message: '手机号非法'
+#--------------------预期结果区域，end-------------------------------------------------               
+#*****************************用例设计完成，end***************************************** 
+  
+
+ningxinghua11:
+      data:
+      
+#************************这是新的一条用例start***************************************  
+           -
+#------------------------method区域，start----------------------------------------- 
+              method: 'post'                         
+#------------------------method区域，end-------------------------------------------
+
+#------------------------url区域，start--------------------------------------------              
+              url: '${url}/alm/service/manage/save'  #${url}不可修改，只可修改后半部分
+#------------------------url区域，end---------------------------------------------- 
+              
+#--------------------headers区域，start--------------------------------------------                    
+              headers:
+                   -
+                      Content-Type: 'application/json'                     
+                      x-gaia-api-key: "${apiKey}"          #不可修改
+                      c2-sso-sessionid: "${sessionid}"     #不可修改
+#--------------------headers区域，end----------------------------------------------       
+#--------------------body区域，start-----------------------------------------------       
+         
+              body: {"data":{"serviceName":"${name10}","serviceProvideDepartObj":{"name":"运营部","id":"1000000006","parentId":"1000000004",
+              "subList":[{"name":"${apiKey}","id":"1000000007","parentId":"1000000006","subList":[]},
+              {"name":"运营中心","id":"1000000010","parentId":"1000000006","subList":[]},
+              {"name":"商业开发中心","id":"1000003534","parentId":"1000000006","subList":[]},
+              {"name":"数字运营及主数据中心","id":"1000005777","parentId":"1000000006","subList":[]}]},"serviceObj":["1"],"serviceTypeObj":{"id":"60b760aee164026fd20a0c1c","name":"散包管理类"},
+              "touchAccess":false,"serviceSchema":" ces","serviceRequestAddress":"","serviceFormType":"1","serviceProviderObj":{},
+              "serviceOnlineTime":"2021-07-23","serviceGuideAddress":"","serviceOwnerName":"吴**","serviceOwner":"wuyfeng","processGroupListName":"吴**",
+              "processGroupList":["wuyj"],"labelName":["ss"],"formType2Val":"","labelList":[{"name":"ss"}],"serviceProvideDepartId":"1000000006",
+              "serviceType":"60b760aee164026fd20a0c1c"}}
+#--------------------body区域，end------------------------------------------------- 
+#--------------------预期结果区域，start--------------------------------------------
+                
+              status_code: 10000
+              message: '成功'
+#--------------------预期结果区域，end-----------------------------------------------              
+#*****************************用例设计完成，end************************************ 
+
+
+
+#************************这是新的一条用例start***************************************  
+           -
+#------------------------method区域，start----------------------------------------- 
+              method: 'post'                         
+#------------------------method区域，end-------------------------------------------
+
+#------------------------url区域，start--------------------------------------------              
+              url: '${url}/alm/service/manage/save'  #${url}不可修改，只可修改后半部分
+#------------------------url区域，end---------------------------------------------- 
+              
+#--------------------headers区域，start--------------------------------------------                    
+              headers:
+                   -
+                      Content-Type: 'application/json'                     
+                      x-gaia-api-key: "${apiKey}"          #不可修改
+                      c2-sso-sessionid: "${sessionid}"     #不可修改
+#--------------------headers区域，end----------------------------------------------       
+#--------------------body区域，start-----------------------------------------------       
+         
+              body: {"data":{"serviceName":"sss12","serviceProvideDepartObj":{"name":"运营部","id":"1000000006","parentId":"1000000004",
+              "subList":[{"name":"客户关系中心","id":"1000000007","parentId":"1000000006","subList":[]},
+              {"name":"运营中心","id":"1000000010","parentId":"1000000006","subList":[]},
+              {"name":"商业开发中心","id":"1000003534","parentId":"1000000006","subList":[]},
+              {"name":"数字运营及主数据中心","id":"1000005777","parentId":"1000000006","subList":[]}]},"serviceObj":["1"],"serviceTypeObj":{"id":"60b760aee164026fd20a0c1c","name":"散包管理类"},
+              "touchAccess":false,"serviceSchema":" ces","serviceRequestAddress":"","serviceFormType":"1","serviceProviderObj":{},
+              "serviceOnlineTime":"2021-07-23","serviceGuideAddress":"","serviceOwnerName":"吴**","serviceOwner":"wuyfeng","processGroupListName":"吴**",
+              "processGroupList":["wuyj"],"labelName":["ss"],"formType2Val":"","labelList":[{"name":"ss"}],"serviceProvideDepartId":"1000000006",
+              "serviceType":"60b760aee164026fd20a0c1c"}}
+#--------------------body区域，end------------------------------------------------- 
+#--------------------预期结果区域，start--------------------------------------------
+                
+              status_code: 10004
+              message: '【sss12】服务名称重复'
+#--------------------预期结果区域，end-------------------------------------------------               
+#*****************************用例设计完成，end***************************************** 
+
+
+#************************这是新的一条用例start***************************************  
+           -
+#------------------------method区域，start----------------------------------------- 
+              method: 'post'                         
+#------------------------method区域，end-------------------------------------------
+
+#------------------------url区域，start--------------------------------------------              
+              url: '${url}/alm/outsourcingEmployeeDemand/add'  #${url}不可修改，只可修改后半部分
+#------------------------url区域，end---------------------------------------------- 
+              
+#--------------------headers区域，start--------------------------------------------                    
+              headers:
+                   -
+                      Content-Type: 'application/json'                     
+                      x-gaia-api-key: "${apiKey}"          #不可修改
+                      c2-sso-sessionid: "${sessionid}"     #不可修改
+#--------------------headers区域，end----------------------------------------------       
+#--------------------body区域，start-----------------------------------------------       
+         
+              body: {"data":{"needsList":[{"remark":"18600430789","postId":"107","levelId":"V1","levelAndMechanism":"V1-5fe37a1fe39649f49ecc3342e582db01","days":"99","entryTime":"2021-08-09","superiorName":"张**","superiorId":"600004049","firstInterviewerId":"600004049","secondInterviewerId":"600004049","firstIntervieweName":"张**","firstInterviewerPhone":"18600430789","secondInterviewerName":"张**","secondInterviewerPhone":"18600430789","leaderList":[{"id":null,"name":"张**","account":"zhangxinghua","employeeId":"600004049","department":"集团总部/数字科技部/项目管理中心/DT管理平台组","departmentShortName":"集团总部-数字科技部-项目管理中心-DT管理平台组","personType":1,"quit":false,"roleId":null,"roleName":null,"centerInfoList":null,"superiorName":null,"superior":null,"payRdCenter":null,"payRdCenterName":null,"assignRate":null,"rdCenter":"1000006076","centerName":"项目管理中心"}],"firstList":[{"id":null,"name":"张**","account":"zhangxinghua","employeeId":"600004049","department":"集团总部/数字科技部/项目管理中心/DT管理平台组","departmentShortName":"集团总部-数字科技部-项目管理中心-DT管理平台组","personType":1,"quit":false,"roleId":null,"roleName":null,"centerInfoList":null,"superiorName":null,"superior":null,"payRdCenter":null,"payRdCenterName":null,"assignRate":null,"rdCenter":"1000006076","centerName":"项目管理中心"}],"secondList":[{"id":null,"name":"张**","account":"zhangxinghua","employeeId":"600004049","department":"集团总部/数字科技部/项目管理中心/DT管理平台组","departmentShortName":"集团总部-数字科技部-项目管理中心-DT管理平台组","personType":1,"quit":false,"roleId":null,"roleName":null,"centerInfoList":null,"superiorName":null,"superior":null,"payRdCenter":null,"payRdCenterName":null,"assignRate":null,"rdCenter":"1000006076","centerName":"项目管理中心"}],"levelStatus":[{"gradeId":"V1","gradeName":"V1","mechanismId":"5fe37a1fe39649f49ecc3342e582db01","mechanismName":"【体系(Lily体系3)】"},{"gradeId":"V2","gradeName":"V2","mechanismId":"5fe37a1fe39649f49ecc3342e582db01","mechanismName":"【体系(Lily体系3)】"},{"gradeId":"V3","gradeName":"V3","mechanismId":"5fe37a1fe39649f49ecc3342e582db01","mechanismName":"【体系(Lily体系3)】"},{"gradeId":"V4","gradeName":"V4","mechanismId":"5fe37a1fe39649f49ecc3342e582db01","mechanismName":"【体系(Lily体系3)】"}],"workCity":"1","mechanismId":"5fe37a1fe39649f49ecc3342e582db01"}],"subProjectId":"251403","projectId":"251402"}}
+              
+#--------------------body区域，end------------------------------------------------- 
+#--------------------预期结果区域，start--------------------------------------------
+                
+              status_code: 10000
+              message: '成功'
+#--------------------预期结果区域，end-------------------------------------------------               
+#*****************************用例设计完成，end***************************************** 
+    
+    
+#************************这是新的一条用例start***************************************  
+           -
+#------------------------method区域，start----------------------------------------- 
+              method: 'post'                         
+#------------------------method区域，end-------------------------------------------
+
+#------------------------url区域，start--------------------------------------------              
+              url: '${url}/alm/outsourcingInfo/list'  #${url}不可修改，只可修改后半部分
+#------------------------url区域，end---------------------------------------------- 
+              
+#--------------------headers区域，start--------------------------------------------                    
+              headers:
+                   -
+                      Content-Type: 'application/json'                     
+                      x-gaia-api-key: "${apiKey}"          #不可修改
+                      c2-sso-sessionid: "${sessionid}"     #不可修改
+#--------------------headers区域，end----------------------------------------------       
+#--------------------body区域，start-----------------------------------------------       
+         
+              body: {"data":{"superiorNameOrAccount":"","nameAndAccount":"","outsouringCompany":"","posts":[],"projectId":"","rdCenterId":"","jobStatus":["1","2"]},"pageInfo":{"pageNum":1,"pageSize":100}}
+              
+#--------------------body区域，end------------------------------------------------- 
+#--------------------预期结果区域，start--------------------------------------------
+                
+              status_code: 10004
+              message: '手机号非法'
+#--------------------预期结果区域，end-------------------------------------------------               
+#*****************************用例设计完成，end***************************************** 
+  
+  

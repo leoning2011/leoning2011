@@ -1,0 +1,139 @@
+#-----请勿修改------config-info#----------start-----------------------------------------
+x-gaia-api-key: &x-gaia-api-key d6b00510-4549-4a05-bf37-fe7e7da9a1a3
+
+
+#-----请勿修改------config-info#----------ending----------------------------------------
+
+
+
+
+
+#--------------------这是一个登录案例--------------------------------------------
+test_user_login:
+      data:
+           -
+              method: 'post'
+              url: 'http://c2-uat-sso.longfor.com/doLogin'
+              
+              headers:
+                   -
+                      Content-Type: 'application/x-www-form-urlencoded'
+#--------------------变量区域，勿动--------------------------------------------                      
+                      x-gaia-api-key: *x-gaia-api-key
+                      c2-sso-sessionid: sessionid   
+#--------------------变量区域，勿动--------------------------------------------        
+              body:
+                   -
+                      username: 'lizhen16'
+                      password: '12' 
+              status_code: 200
+              message: '成功'
+           -
+              method: 'post'
+              url: 'http://c2-uat-sso.longfor.com/doLogin'
+              headers:
+                   -
+                      Content-Type: 'application/x-www-form-urlencoded' 
+#--------------------变量区域，勿动--------------------------------------------                      
+                      x-gaia-api-key: *x-gaia-api-key
+                      c2-sso-sessionid: sessionid   
+#--------------------变量区域，勿动--------------------------------------------        
+             
+              body:
+                   -
+                      username: 'lizhen16'
+                      password: '' 
+              status_code: 400
+              message: 'Please input username/password.'
+
+manage_list:
+      data:
+           -
+              method: 'post'
+              url: 'https://testapi.longhu.net/cm-alm-manage-admin-uat/alm/service/manage/list'
+              headers:
+                   -
+                      Content-Type: 'application/x-www-form-urlencoded'
+#--------------------变量区域，勿动--------------------------------------------                      
+                      x-gaia-api-key: *x-gaia-api-key
+                      c2-sso-sessionid: sessionid   
+#--------------------变量区域，勿动--------------------------------------------        
+      
+              body:
+                   -
+                      data:
+                              serviceId: ''
+                      pageInfo:
+                                  pageNum: '1'
+                                  pageSize: '100'                                                   
+              status_code: 200
+              message: '成功'
+              
+              
+
+service_manage_save:
+      data:
+           -
+              method: 'post'
+              url: 'http://testapi.longhu.net/cm-alm-manage-admin-uat/alm/service/manage/save'
+              headers:
+                   -
+                      Content-Type: 'application/json'
+#--------------------变量区域，勿动--------------------------------------------                      
+                      x-gaia-api-key: *x-gaia-api-key
+                      c2-sso-sessionid: sessionid   
+#--------------------变量区域，勿动--------------------------------------------        
+      
+              body: {"data":{"serviceName":'名称',"serviceProvideDepartObj":{"name":"运营部","id":"1000000006","parentId":"1000000004",
+              "subList":[{"name":"客户关系中心","id":"1000000007","parentId":"1000000006","subList":[]},
+              {"name":"运营中心","id":"1000000010","parentId":"1000000006","subList":[]},
+              {"name":"商业开发中心","id":"1000003534","parentId":"1000000006","subList":[]},
+              {"name":"数字运营及主数据中心","id":"1000005777","parentId":"1000000006","subList":[]}]},"serviceObj":["1"],"serviceTypeObj":{"id":"60b760aee164026fd20a0c1c","name":"散包管理类"},
+              "touchAccess":false,"serviceSchema":" ces","serviceRequestAddress":"","serviceFormType":"1","serviceProviderObj":{},
+              "serviceOnlineTime":"2021-07-23","serviceGuideAddress":"","serviceOwnerName":"吴**","serviceOwner":"wuyfeng","processGroupListName":"吴**",
+              "processGroupList":["wuyj"],"labelName":["ss"],"formType2Val":"","labelList":[{"name":"ss"}],"serviceProvideDepartId":"1000000006",
+              "serviceType":"60b760aee164026fd20a0c1c"}}
+              status_code: 10000
+              message: '成功'
+ 
+           -
+              method: 'post'
+              url: 'http://testapi.longhu.net/cm-alm-manage-admin-uat/alm/service/manage/save'
+              headers:
+                   -
+                      Content-Type: 'application/json'
+#--------------------变量区域，勿动--------------------------------------------                      
+                      x-gaia-api-key: *x-gaia-api-key
+                      c2-sso-sessionid: sessionid   
+#--------------------变量区域，勿动--------------------------------------------        
+      
+              body: {"data":{"serviceName":"sss12","serviceProvideDepartObj":{"name":"运营部","id":"1000000006","parentId":"1000000004",
+              "subList":[{"name":"客户关系中心","id":"1000000007","parentId":"1000000006","subList":[]},
+              {"name":"运营中心","id":"1000000010","parentId":"1000000006","subList":[]},
+              {"name":"商业开发中心","id":"1000003534","parentId":"1000000006","subList":[]},
+              {"name":"数字运营及主数据中心","id":"1000005777","parentId":"1000000006","subList":[]}]},"serviceObj":["1"],"serviceTypeObj":{"id":"60b760aee164026fd20a0c1c","name":"散包管理类"},
+              "touchAccess":false,"serviceSchema":" ces","serviceRequestAddress":"","serviceFormType":"1","serviceProviderObj":{},
+              "serviceOnlineTime":"2021-07-23","serviceGuideAddress":"","serviceOwnerName":"吴**","serviceOwner":"wuyfeng","processGroupListName":"吴**",
+              "processGroupList":["wuyj"],"labelName":["ss"],"formType2Val":"","labelList":[{"name":"ss"}],"serviceProvideDepartId":"1000000006",
+              "serviceType":"60b760aee164026fd20a0c1c"}}
+              status_code: 10004
+              message: '【sss12】服务名称重复'
+              
+
+addSubProject:
+      data:
+           -
+              method: 'post'
+              url: 'http://testapi.longhu.net/cm-alm-manage-admin-uat/alm/project/addSubProject'
+              headers:
+                   -
+                      Content-Type: 'application/json'
+#--------------------变量区域，勿动--------------------------------------------                      
+                      x-gaia-api-key: *x-gaia-api-key
+                      c2-sso-sessionid: sessionid   
+#--------------------变量区域，勿动--------------------------------------------        
+      
+              body:                           
+                                                                                   
+              status_code: 200
+              message: '成功'             

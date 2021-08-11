@@ -1,0 +1,2 @@
+Sat, 13 Mar 2021 12:00:12-__main__-log.py-[line:50]-INFO-[日志信息]: 哈哈
+Sat, 13 Mar 2021 12:00:12-__main__-log.py-[line:51]-ERROR-[日志信息]: 嘻嘻

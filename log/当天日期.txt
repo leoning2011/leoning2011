@@ -1,0 +1,22 @@
+2021-05-19Sun, 18 Jul 2021 19:39:01-api.log.log-httplint.py-[line:32]-ERROR-[日志信息]: request() got an unexpected keyword argument 'body'
+Sun, 18 Jul 2021 23:25:06-api.log.log-httpclient.py-[line:46]-ERROR-[日志信息]: 'list' object has no attribute 'items'
+Sun, 18 Jul 2021 23:25:07-api.log.log-httpclient.py-[line:46]-ERROR-[日志信息]: 'list' object has no attribute 'items'
+Sun, 18 Jul 2021 23:33:28-api.log.log-httpclient.py-[line:46]-ERROR-[日志信息]: 'list' object has no attribute 'items'
+Sun, 18 Jul 2021 23:33:28-api.log.log-httpclient.py-[line:46]-ERROR-[日志信息]: 'list' object has no attribute 'items'
+Sun, 18 Jul 2021 23:35:04-api.log.log-httpclient.py-[line:46]-ERROR-[日志信息]: 'list' object has no attribute 'items'
+Sun, 18 Jul 2021 23:35:04-api.log.log-httpclient.py-[line:46]-ERROR-[日志信息]: 'list' object has no attribute 'items'
+Sun, 18 Jul 2021 23:35:30-api.log.log-httpclient.py-[line:46]-ERROR-[日志信息]: 'list' object has no attribute 'items'
+Sun, 18 Jul 2021 23:35:30-api.log.log-httpclient.py-[line:46]-ERROR-[日志信息]: 'list' object has no attribute 'items'
+Sun, 18 Jul 2021 23:35:51-api.log.log-httpclient.py-[line:46]-ERROR-[日志信息]: 'list' object has no attribute 'items'
+Sun, 18 Jul 2021 23:35:51-api.log.log-httpclient.py-[line:46]-ERROR-[日志信息]: 'list' object has no attribute 'items'
+Fri, 23 Jul 2021 10:19:43-api.log.log-httpclient.py-[line:46]-ERROR-[日志信息]: 'list' object has no attribute 'items'
+Fri, 23 Jul 2021 11:06:50-api.log.log-httpclient.py-[line:46]-ERROR-[日志信息]: not enough values to unpack (expected 2, got 1)
+Fri, 23 Jul 2021 13:51:47-api.log.log-httpclient.py-[line:46]-ERROR-[日志信息]: 'latin-1' codec can't encode characters in position 69-71: Body ('运营部') is not valid Latin-1. Use body.encode('utf-8') if you want to send it encoded in UTF-8.
+Fri, 23 Jul 2021 20:28:37-api.log.log-httpclient.py-[line:46]-ERROR-[日志信息]: 'latin-1' codec can't encode characters in position 70-72: Body ('运营部') is not valid Latin-1. Use body.encode('utf-8') if you want to send it encoded in UTF-8.
+Fri, 23 Jul 2021 20:28:37-api.log.log-httpclient.py-[line:46]-ERROR-[日志信息]: 'latin-1' codec can't encode characters in position 71-73: Body ('运营部') is not valid Latin-1. Use body.encode('utf-8') if you want to send it encoded in UTF-8.
+Fri, 23 Jul 2021 20:32:57-api.log.log-httpclient.py-[line:46]-ERROR-[日志信息]: 'latin-1' codec can't encode characters in position 70-72: Body ('运营部') is not valid Latin-1. Use body.encode('utf-8') if you want to send it encoded in UTF-8.
+Fri, 23 Jul 2021 20:32:57-api.log.log-httpclient.py-[line:46]-ERROR-[日志信息]: 'latin-1' codec can't encode characters in position 71-73: Body ('运营部') is not valid Latin-1. Use body.encode('utf-8') if you want to send it encoded in UTF-8.
+Fri, 23 Jul 2021 20:34:34-api.log.log-httpclient.py-[line:46]-ERROR-[日志信息]: 'latin-1' codec can't encode characters in position 105-107: Body ('运营部') is not valid Latin-1. Use body.encode('utf-8') if you want to send it encoded in UTF-8.
+Fri, 23 Jul 2021 20:34:34-api.log.log-httpclient.py-[line:46]-ERROR-[日志信息]: 'latin-1' codec can't encode characters in position 106-108: Body ('运营部') is not valid Latin-1. Use body.encode('utf-8') if you want to send it encoded in UTF-8.
+Fri, 23 Jul 2021 20:40:12-api.log.log-httpclient.py-[line:46]-ERROR-[日志信息]: 'latin-1' codec can't encode characters in position 89-91: Body ('运营部') is not valid Latin-1. Use body.encode('utf-8') if you want to send it encoded in UTF-8.
+Fri, 23 Jul 2021 20:40:12-api.log.log-httpclient.py-[line:46]-ERROR-[日志信息]: 'latin-1' codec can't encode characters in position 90-92: Body ('运营部') is not valid Latin-1. Use body.encode('utf-8') if you want to send it encoded in UTF-8.
