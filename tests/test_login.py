@@ -9,7 +9,7 @@ class TestLogin:
     @pytest.mark.v2
     @pytest.mark.parametrize('user', LoginData.loginTestCase())
     def test_login(self, user):
-        url = 'http://c2-uat-sso.longfor.com/doLogin'
+        url = 'http://c2-uat-sso.######.com/doLogin'
         headers = {
             'Content-Type':'application/x-www-form-urlencoded',
                }
@@ -29,7 +29,7 @@ class TestLogin:
                     
  
 if __name__ == '__main__':
-    pytest.main(['-s','test_login.py', '--html=/Users/longhuadmin/opt/anaconda3/lib/python3.8/site-packages/api/report/huice.html'])
+    pytest.main(['-s','test_login.py', '--html=/Users/.######./opt/anaconda3/lib/python3.8/site-packages/api/report/huice.html'])
     
                     
                     
